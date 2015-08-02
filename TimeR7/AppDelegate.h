@@ -11,7 +11,8 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic) NSUInteger notificationCount;
+@property (nonatomic) NSMutableDictionary * mDic_LocalNotification;
 
 @end
 

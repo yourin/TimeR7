@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B271CCC1B4B1D83009FF3CF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B271CC51B4B1D83009FF3CF /* MainViewController.m */; };
+		7B271CCD1B4B1D83009FF3CF /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B271CC71B4B1D83009FF3CF /* FlipsideViewController.m */; };
+		7B271CCE1B4B1D83009FF3CF /* StopWatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B271CC91B4B1D83009FF3CF /* StopWatch.m */; };
+		7B271CCF1B4B1D83009FF3CF /* MyLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B271CCB1B4B1D83009FF3CF /* MyLocalNotification.m */; };
+		7B271CDC1B4B208B009FF3CF /* BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B271CD01B4B208B009FF3CF /* BG.png */; };
+		7B271CDD1B4B208B009FF3CF /* mother.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B271CD11B4B208B009FF3CF /* mother.png */; };
+		7B271CDE1B4B208B009FF3CF /* Notification.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7B271CD21B4B208B009FF3CF /* Notification.caf */; };
+		7BC81E2B1B6EB76200774BD2 /* UIColor+WZYFlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC81E281B6EB76200774BD2 /* UIColor+WZYFlatUI.m */; };
+		7BC81E2C1B6EB76200774BD2 /* UIColor+WZYIOS7.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC81E2A1B6EB76200774BD2 /* UIColor+WZYIOS7.m */; };
 		7BE358561B488FA90038D496 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE358551B488FA90038D496 /* main.m */; };
 		7BE358591B488FA90038D496 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE358581B488FA90038D496 /* AppDelegate.m */; };
-		7BE3585C1B488FA90038D496 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3585B1B488FA90038D496 /* FirstViewController.m */; };
-		7BE3585F1B488FA90038D496 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3585E1B488FA90038D496 /* SecondViewController.m */; };
 		7BE358621B488FA90038D496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE358601B488FA90038D496 /* Main.storyboard */; };
 		7BE358641B488FA90038D496 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BE358631B488FA90038D496 /* Images.xcassets */; };
 		7BE358671B488FA90038D496 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BE358651B488FA90038D496 /* LaunchScreen.xib */; };
@@ -28,15 +35,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B271CC41B4B1D83009FF3CF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7B271CC51B4B1D83009FF3CF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7B271CC61B4B1D83009FF3CF /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		7B271CC71B4B1D83009FF3CF /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		7B271CC81B4B1D83009FF3CF /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopWatch.h; sourceTree = "<group>"; };
+		7B271CC91B4B1D83009FF3CF /* StopWatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopWatch.m; sourceTree = "<group>"; };
+		7B271CCA1B4B1D83009FF3CF /* MyLocalNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocalNotification.h; sourceTree = "<group>"; };
+		7B271CCB1B4B1D83009FF3CF /* MyLocalNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocalNotification.m; sourceTree = "<group>"; };
+		7B271CD01B4B208B009FF3CF /* BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG.png; sourceTree = "<group>"; };
+		7B271CD11B4B208B009FF3CF /* mother.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mother.png; sourceTree = "<group>"; };
+		7B271CD21B4B208B009FF3CF /* Notification.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Notification.caf; sourceTree = "<group>"; };
+		7BC81E261B6EB76200774BD2 /* WZYFlatUIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZYFlatUIColor.h; sourceTree = "<group>"; };
+		7BC81E271B6EB76200774BD2 /* UIColor+WZYFlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WZYFlatUI.h"; sourceTree = "<group>"; };
+		7BC81E281B6EB76200774BD2 /* UIColor+WZYFlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WZYFlatUI.m"; sourceTree = "<group>"; };
+		7BC81E291B6EB76200774BD2 /* UIColor+WZYIOS7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WZYIOS7.h"; sourceTree = "<group>"; };
+		7BC81E2A1B6EB76200774BD2 /* UIColor+WZYIOS7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WZYIOS7.m"; sourceTree = "<group>"; };
 		7BE358501B488FA90038D496 /* TimeR7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeR7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE358541B488FA90038D496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BE358551B488FA90038D496 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7BE358571B488FA90038D496 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7BE358581B488FA90038D496 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7BE3585A1B488FA90038D496 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		7BE3585B1B488FA90038D496 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		7BE3585D1B488FA90038D496 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		7BE3585E1B488FA90038D496 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		7BE358611B488FA90038D496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BE358631B488FA90038D496 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7BE358661B488FA90038D496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -63,9 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7BC81E251B6EB73800774BD2 /* Classses */ = {
+			isa = PBXGroup;
+			children = (
+				7BC81E261B6EB76200774BD2 /* WZYFlatUIColor.h */,
+				7BC81E271B6EB76200774BD2 /* UIColor+WZYFlatUI.h */,
+				7BC81E281B6EB76200774BD2 /* UIColor+WZYFlatUI.m */,
+				7BC81E291B6EB76200774BD2 /* UIColor+WZYIOS7.h */,
+				7BC81E2A1B6EB76200774BD2 /* UIColor+WZYIOS7.m */,
+			);
+			name = Classses;
+			sourceTree = "<group>";
+		};
 		7BE358471B488FA90038D496 = {
 			isa = PBXGroup;
 			children = (
+				7BC81E251B6EB73800774BD2 /* Classses */,
 				7BE358521B488FA90038D496 /* TimeR7 */,
 				7BE3586F1B488FA90038D496 /* TimeR7Tests */,
 				7BE358511B488FA90038D496 /* Products */,
@@ -86,13 +118,17 @@
 			children = (
 				7BE358571B488FA90038D496 /* AppDelegate.h */,
 				7BE358581B488FA90038D496 /* AppDelegate.m */,
-				7BE3585A1B488FA90038D496 /* FirstViewController.h */,
-				7BE3585B1B488FA90038D496 /* FirstViewController.m */,
-				7BE3585D1B488FA90038D496 /* SecondViewController.h */,
-				7BE3585E1B488FA90038D496 /* SecondViewController.m */,
 				7BE358601B488FA90038D496 /* Main.storyboard */,
 				7BE358631B488FA90038D496 /* Images.xcassets */,
 				7BE358651B488FA90038D496 /* LaunchScreen.xib */,
+				7B271CC41B4B1D83009FF3CF /* MainViewController.h */,
+				7B271CC51B4B1D83009FF3CF /* MainViewController.m */,
+				7B271CC61B4B1D83009FF3CF /* FlipsideViewController.h */,
+				7B271CC71B4B1D83009FF3CF /* FlipsideViewController.m */,
+				7B271CC81B4B1D83009FF3CF /* StopWatch.h */,
+				7B271CC91B4B1D83009FF3CF /* StopWatch.m */,
+				7B271CCA1B4B1D83009FF3CF /* MyLocalNotification.h */,
+				7B271CCB1B4B1D83009FF3CF /* MyLocalNotification.m */,
 				7BE358531B488FA90038D496 /* Supporting Files */,
 			);
 			path = TimeR7;
@@ -101,6 +137,9 @@
 		7BE358531B488FA90038D496 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7B271CD01B4B208B009FF3CF /* BG.png */,
+				7B271CD11B4B208B009FF3CF /* mother.png */,
+				7B271CD21B4B208B009FF3CF /* Notification.caf */,
 				7BE358541B488FA90038D496 /* Info.plist */,
 				7BE358551B488FA90038D496 /* main.m */,
 			);
@@ -205,8 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BE358621B488FA90038D496 /* Main.storyboard in Resources */,
+				7B271CDD1B4B208B009FF3CF /* mother.png in Resources */,
 				7BE358671B488FA90038D496 /* LaunchScreen.xib in Resources */,
+				7B271CDC1B4B208B009FF3CF /* BG.png in Resources */,
 				7BE358641B488FA90038D496 /* Images.xcassets in Resources */,
+				7B271CDE1B4B208B009FF3CF /* Notification.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,9 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BE3585F1B488FA90038D496 /* SecondViewController.m in Sources */,
+				7BC81E2C1B6EB76200774BD2 /* UIColor+WZYIOS7.m in Sources */,
+				7B271CCF1B4B1D83009FF3CF /* MyLocalNotification.m in Sources */,
 				7BE358591B488FA90038D496 /* AppDelegate.m in Sources */,
-				7BE3585C1B488FA90038D496 /* FirstViewController.m in Sources */,
+				7B271CCC1B4B1D83009FF3CF /* MainViewController.m in Sources */,
+				7B271CCE1B4B1D83009FF3CF /* StopWatch.m in Sources */,
+				7B271CCD1B4B1D83009FF3CF /* FlipsideViewController.m in Sources */,
+				7BC81E2B1B6EB76200774BD2 /* UIColor+WZYFlatUI.m in Sources */,
 				7BE358561B488FA90038D496 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,9 +399,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TimeR7/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TimeR7",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -364,9 +415,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TimeR7/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TimeR7",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -424,6 +480,7 @@
 				7BE358781B488FA90038D496 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BE358791B488FA90038D496 /* Build configuration list for PBXNativeTarget "TimeR7Tests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +489,7 @@
 				7BE3587B1B488FA90038D496 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
