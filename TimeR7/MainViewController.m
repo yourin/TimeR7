@@ -77,6 +77,7 @@
     UILabel     * lbl_AlarmTime;
     UIStepper   * stepper;
 
+
     
 }
 
@@ -199,8 +200,24 @@
             lapLabelY           = 40;
             LapButtonXY         = 62;
             LapLabelSizeY       = 17;
-        }else{
+        }else
+            if(self.view.bounds.size.height == 667.0){
+                
+                // ３．５、４インチ以外のサイズの場合　NewiPhone
+                NSLog(@"iPhone6");
+                
+                SW_lbl_HeightSize   = 62;
+                myPhoneHeightSize   = self.view.bounds.size.height;//v1.2
+                myPhoneWidthSize    = self.view.bounds.size.width;//v1.2
+                lapLabelY           = 40;
+                LapButtonXY         = 62;
+                LapLabelSizeY       = 17;
+           
+        }else
+            if(self.view.bounds.size.height == 736.0){
+
             // ３．５、４インチ以外のサイズの場合　NewiPhone
+                NSLog(@"iPhone6+");
     
             SW_lbl_HeightSize   = 62;
             myPhoneHeightSize   = self.view.bounds.size.height;//v1.2
