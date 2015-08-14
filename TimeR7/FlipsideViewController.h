@@ -41,6 +41,7 @@
 
 - (IBAction)done:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UINavigationBar *nabigationBar;
 
 //　最初に表示するストップウォッチの数
 @property (weak, nonatomic) IBOutlet UILabel *firstStopWatchesCount;

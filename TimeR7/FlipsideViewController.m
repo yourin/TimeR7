@@ -35,34 +35,34 @@
 @property (weak, nonatomic) IBOutlet ADBannerView *bannerView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrolView;
-@property (nonatomic) UIPickerView *pickerView;
-@property (nonatomic)BOOL isDispPicker;
-@property (nonatomic)UIImageView* imageView;
-@property (nonatomic)UIView* myView;
-@property (nonatomic)UIButton* btn_cancel;
-@property (nonatomic)UIButton* btn_Set;
+@property (nonatomic)UIPickerView*  pickerView;
+@property (nonatomic)BOOL           isDispPicker;
+@property (nonatomic)UIImageView*   imageView;
+@property (nonatomic)UIView*        myView;
+@property (nonatomic)UIButton*      btn_cancel;
+@property (nonatomic)UIButton*      btn_Set;
 
 @end
 
 @implementation FlipsideViewController
 {
-    CFURLRef       soundURL;
-    SystemSoundID  soundID;
-    BOOL        _bannerIsVisible;
-    NSArray*    _rainbowColors;
+    CFURLRef            soundURL;
+    SystemSoundID       soundID;
+    BOOL                _bannerIsVisible;
+    NSArray*            _rainbowColors;
     
-    NSMutableArray*    ary_PresetTimes;
+    NSMutableArray*     ary_PresetTimes;
     
-    UIButton*   btn_presetTimes[PRESET_TIMERS_COUNT];
+    UIButton*           btn_presetTimes[PRESET_TIMERS_COUNT];
     
-    NSMutableArray* ary_Hour;
-    NSMutableArray* ary_Min;
-    NSMutableArray* ary_Sec;
+    NSMutableArray*     ary_Hour;
+    NSMutableArray*     ary_Min;
+    NSMutableArray*     ary_Sec;
     
-    NSUInteger newPresetTimes;
-    NSInteger selected_PresetNum;
+    NSUInteger          newPresetTimes;
+    NSInteger           selected_PresetNum;
     
-    BOOL    _isNotSleepMode;
+    BOOL                _isNotSleepMode;
 
 }
 
@@ -244,6 +244,11 @@
     // 一般的なリクエストを行って広告を読み込む
     [bannerView_ loadRequest:[GADRequest request]];
      */
+    
+    CGFloat posY = self.view.bounds.size.height - 44;
+    self.nabigationBar.frame =  CGRectMake(0, posY, self.view.bounds.size.width, 44);
+    NSLog(@"@@@@@@@@@@@@@@@@@@@@@");
+    NSLog(@"NabiX = %3.1f,NabiY = %3.1f",self.nabigationBar.bounds.origin.x,self.nabigationBar.bounds.origin.y);
     
 }
 

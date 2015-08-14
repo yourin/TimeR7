@@ -183,11 +183,16 @@
     NSLog(@"Height = %3.1f",self.view.bounds.size.height);
     
 #pragma mark 画面サイズ別バーツサイズ指定
+    
+    myPhoneHeightSize   = self.view.bounds.size.height;//v1.2
+    myPhoneWidthSize    = self.view.bounds.size.width;//v1.2
+
+    
     if(self.view.bounds.size.height == 480)
     {
         NSLog(@"iPhone4");
         SW_lbl_HeightSize   = 51;
-        myPhoneHeightSize   = 480;
+//        myPhoneHeightSize   = 480;
         lapLabelY           = 36;
         LapButtonXY         = 51;
         LapLabelSizeY       = 16;
@@ -196,7 +201,7 @@
             
             NSLog(@"iPhone5");
             SW_lbl_HeightSize   = 62;
-            myPhoneHeightSize   = 568;
+//            myPhoneHeightSize   = 568;
             lapLabelY           = 40;
             LapButtonXY         = 62;
             LapLabelSizeY       = 17;
@@ -207,8 +212,6 @@
                 NSLog(@"iPhone6");
                 
                 SW_lbl_HeightSize   = 62;
-                myPhoneHeightSize   = self.view.bounds.size.height;//v1.2
-                myPhoneWidthSize    = self.view.bounds.size.width;//v1.2
                 lapLabelY           = 40;
                 LapButtonXY         = 62;
                 LapLabelSizeY       = 17;
@@ -316,7 +319,7 @@
                 case kStopWatch_MODE:
                     // StopWatch Mode
 
-//                     NSLog(@"Don't Check Alam Time ");
+                     NSLog(@"Don't Check Alam Time ");
                     
                     // 数値を文字に変換
                     _labelTimer[i].text = [StopWatch dateToString:tmp dispMilliSec:YES];
@@ -330,13 +333,13 @@
                     if(_sw[i].dateAlartTime != 0)
                     {
                         float alartTime = _sw[i].dateAlartTime - tmp;
-//                        NSLog(@"alartTime = %.1f tmp = %.1f",_sw[i].dateAlartTime,tmp);
+                        NSLog(@"alartTime = %.1f tmp = %.1f",_sw[i].dateAlartTime,tmp);
                         
        
                         if(_sw[i].dateAlartTime <= tmp)
                         {
                             // アラーム起動
-//                            NSLog(@"Alarm Time %d",i);
+                            NSLog(@"Alarm Time %d",i);
                             _labelTimer[i].text = [StopWatch dateToString:_sw[i].dateAlartTime dispMilliSec:YES];
                             timerFlg[i] = NO;
                             _sw[i].tempDateTime = 0.0;
@@ -347,7 +350,7 @@
                             
                         }else{
                             
-//                        NSLog(@"NO Alarm Time");
+                        NSLog(@"NO Alarm Time");
                             // 数値を文字に変換
                             _labelTimer[i].text = [StopWatch dateToString:alartTime dispMilliSec:YES];
                     }
@@ -538,7 +541,10 @@
         
         
         //ボタンの位置と大きさ
-        _btnLap[stopWatchCount] .frame = CGRectMake(320-LapButtonXY, 0, LapButtonXY, LapButtonXY);
+        _btnLap[stopWatchCount] .frame = CGRectMake(myPhoneWidthSize - LapButtonXY, 0, LapButtonXY, LapButtonXY);
+        
+//OLD        _btnLap[stopWatchCount] .frame = CGRectMake(320-LapButtonXY, 0, LapButtonXY, LapButtonXY);
+
         //ボタンを押した時のアクション（メソッド）を設定
         [_btnLap[stopWatchCount] addTarget:self
                                     action:@selector(btnLap:)
@@ -712,7 +718,9 @@
             UIImage *img = [UIImage imageNamed:@"mother.png"];
             
             UIButton* btn_modeChange = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-            btn_modeChange.frame = CGRectMake(320-((SW_lbl_HeightSize/10)*8), 9, (SW_lbl_HeightSize/4)*3, (SW_lbl_HeightSize/4)*3);
+            btn_modeChange.frame = CGRectMake(myPhoneWidthSize -((SW_lbl_HeightSize/10)*8), 9, (SW_lbl_HeightSize/4)*3, (SW_lbl_HeightSize/4)*3);
+
+//OLD            btn_modeChange.frame = CGRectMake(320-((SW_lbl_HeightSize/10)*8), 9, (SW_lbl_HeightSize/4)*3, (SW_lbl_HeightSize/4)*3);
             [btn_modeChange setBackgroundImage:img forState:UIControlStateNormal];
             btn_modeChange.tag = viewTag;
             NSLog(@"btn_modeChange.tag = %d",(int)btn_modeChange.tag);
@@ -774,7 +782,9 @@
 
     //  土台を作成
     iv_setView = [UIImageView new];
-  iv_setView.frame = CGRectMake(  320,  20 + (SW_lbl_HeightSize * viewTag), 320, SW_lbl_HeightSize);
+    iv_setView.frame = CGRectMake(  myPhoneWidthSize,  20 + (SW_lbl_HeightSize * viewTag), myPhoneWidthSize, SW_lbl_HeightSize);
+
+//OLD    iv_setView.frame = CGRectMake(  320,  20 + (SW_lbl_HeightSize * viewTag), 320, SW_lbl_HeightSize);
     iv_setView.userInteractionEnabled = YES; //imageView　で　タッチの検出する
     iv_setView.backgroundColor = _imageView[viewTag].backgroundColor;
     iv_setView.tag = viewTag;
@@ -799,7 +809,9 @@
 
     // セットボタン
     UIButton * set = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    set.frame = CGRectMake(320 - SW_lbl_HeightSize, 0, SW_lbl_HeightSize, SW_lbl_HeightSize);
+    set.frame = CGRectMake(myPhoneWidthSize - SW_lbl_HeightSize, 0, SW_lbl_HeightSize, SW_lbl_HeightSize);
+
+//OLD    set.frame = CGRectMake(320 - SW_lbl_HeightSize, 0, SW_lbl_HeightSize, SW_lbl_HeightSize);
     [set setTitle:@"SET" forState:UIControlStateNormal];
     set.tintColor = [UIColor blueColor];
     [set addTarget:self action:@selector(btn_setViewSet:) forControlEvents:UIControlEventTouchUpInside];
@@ -849,7 +861,9 @@
     NSLog(@"settingViewアニメーションA");
     
     backView.alpha = 0.4f;
-    iv_setView.frame = CGRectMake(  0,  20 + (SW_lbl_HeightSize * viewTag), 320, SW_lbl_HeightSize);
+    iv_setView.frame = CGRectMake(  0,  20 + (SW_lbl_HeightSize * viewTag), myPhoneWidthSize, SW_lbl_HeightSize);
+
+//OLD    iv_setView.frame = CGRectMake(  0,  20 + (SW_lbl_HeightSize * viewTag), 320, SW_lbl_HeightSize);
     iv_setView.alpha = 1.0f;
 
     [UIView commitAnimations]; // アニメーション開始
@@ -870,10 +884,9 @@
         
         alarmTimePresetView = [UIView new];
         alarmTimePresetView.backgroundColor = [UIColor whiteColor];
+        alarmTimePresetView.frame = CGRectMake(myPhoneWidthSize, 20, 51,SW_lbl_HeightSize * array_PresetTime.count);
 
-        alarmTimePresetView.frame = CGRectMake(320, 20,
-                                               51,
-                                               SW_lbl_HeightSize * array_PresetTime.count);
+//OLD        alarmTimePresetView.frame = CGRectMake(320, 20, 51,SW_lbl_HeightSize * array_PresetTime.count);
         alarmTimePresetView.alpha = 0.1;
         [self.view addSubview:alarmTimePresetView];
         
@@ -912,7 +925,8 @@
     [UIView setAnimationDuration:0.4]; //アニメーション時間
     NSLog(@"Insert PresetViewアニメーション");
 //    alarmTimePresetView.center = CGPointMake(320 - (SW_lbl_HeightSize/2), alarmTimePresetView.center.y);
-    alarmTimePresetView.center = CGPointMake(320 - 25, alarmTimePresetView.center.y);
+//OLD    alarmTimePresetView.center = CGPointMake(320 - 25, alarmTimePresetView.center.y);
+    alarmTimePresetView.center = CGPointMake(myPhoneWidthSize - 25, alarmTimePresetView.center.y);
 
     alarmTimePresetView.alpha = 0.9f;
     [UIView commitAnimations]; // アニメーション開始
@@ -945,7 +959,9 @@
         [UIView setAnimationDidStopSelector:@selector(removeAlarmTimePresetView)];
         
         NSLog(@"Back PresetViewアニメーション");
-        alarmTimePresetView.center = CGPointMake(320 + (SW_lbl_HeightSize/2), alarmTimePresetView.center.y);
+        alarmTimePresetView.center = CGPointMake(myPhoneWidthSize + (SW_lbl_HeightSize/2), alarmTimePresetView.center.y);
+
+//OLD        alarmTimePresetView.center = CGPointMake(320 + (SW_lbl_HeightSize/2), alarmTimePresetView.center.y);
         alarmTimePresetView.alpha = 0.1f;
         [UIView commitAnimations]; // アニメーション開始
     }
@@ -1041,7 +1057,9 @@
         [UIView setAnimationDidStopSelector:@selector(removeAlarmTimePresetView)];
         
         NSLog(@"Back PresetViewアニメーション");
-        alarmTimePresetView.center = CGPointMake(320 + (SW_lbl_HeightSize/2), alarmTimePresetView.center.y);
+        alarmTimePresetView.center = CGPointMake(myPhoneWidthSize + (SW_lbl_HeightSize/2), alarmTimePresetView.center.y);
+
+//OLD        alarmTimePresetView.center = CGPointMake(320 + (SW_lbl_HeightSize/2), alarmTimePresetView.center.y);
         alarmTimePresetView.alpha = 0.1f;
         [UIView commitAnimations]; // アニメーション開始
     }
@@ -1073,10 +1091,13 @@
 {
     NSLog(@"Lap Button tag = %d",(int)button.tag);
     
+    
+    // タイマーが動いている場合
     if (timerFlg[button.tag] == YES) {
         
         NSString * str = [_sw[button.tag] LapTime:[NSDate date]];
         
+        //ラップタイムに登録
         if (_sw[button.tag].dateLap1 == nil){
             _labelLap1[button.tag].text = str;
             _sw[button.tag].dateLap1 = [NSDate date];
@@ -1350,7 +1371,9 @@
                         {
                             [UIView beginAnimations:nil context:nil]; //アニメーション
                             [UIView setAnimationDuration:0.5]; //アニメーション時間
-                            _imageView[i].center = CGPointMake(320, 600);
+                            _imageView[i].center = CGPointMake(myPhoneWidthSize, 600);
+
+//OLD                            _imageView[i].center = CGPointMake(320, 600);
                             _imageView[i].transform = CGAffineTransformMakeScale(0.5f, 0.5f);
                             _imageView[i].alpha = 0.1;
                             
